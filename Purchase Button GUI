@@ -1,0 +1,15 @@
+Step 1
+Make sure you have a developer product for sale.
+
+Step 2
+Create a Screen GUI to you game and add it to the Starter GUI folder. Then add a text button to the Screen GUI.
+
+Step 3
+Add regular script to the Screen GUI and paste in this code. (Make sure to change the "YourIDHere" to your developer product ID)
+
+
+local id = YourIDHere
+
+script.Parent.TextButton.MouseButton1Click:connect(function()
+    game.MarketplaceService:PromptProductPurchase(script.Parent.Parent.Parent, id)
+end)

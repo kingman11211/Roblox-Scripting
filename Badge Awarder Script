@@ -1,0 +1,18 @@
+Step 1
+Make sure to have a part in game.
+
+Step 2
+Add a regular script under the part you want the player to get the badge when touched.
+
+Step 3
+Make sure to have a badge.
+
+Step 4
+Add this code to the script you made. (Replace "YOUR-ID-HERE" with your badge ID)
+
+script.Parent.Touched:Connect(function(part)
+ if part.Parent:FindFirstChild("Humanoid") then
+ local player = game.Players:GetPlayerFromCharacter(part.Parent)
+ game:GetService("BadgeService"):AwardBadge(player.UserId, YOUR-ID-HERE)
+ end
+end)

@@ -1,0 +1,9 @@
+--Make sure you rename the part you are using as the door to GamepassDoor
+local player = game.Players.LocalPlayer
+local gamepassid = 0 --Gamepass Id here
+
+
+if game:GetService("MarketplaceService"):UserOwnsGamePassAsync(player.UserId, gamepassid) == true then
+	game.Workspace.GamepassDoor.CanCollide = false
+	game.Workspace.GamepassDoor.Transparency = 0.5
+end

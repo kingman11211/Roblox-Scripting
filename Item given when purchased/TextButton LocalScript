@@ -1,0 +1,3 @@
+script.Parent.MouseButton1Click:Connect(function()
+ game:GetService("MarketplaceService"):PromptGamePassPurchase(game.Players.LocalPlayer,PASSIDHERE) --------- Your Gamepass ID here
+end)

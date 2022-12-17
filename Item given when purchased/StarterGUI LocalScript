@@ -1,0 +1,7 @@
+local player = game.Players.LocalPlayer
+local ownsGamepass = game:GetService("MarketplaceService"):UserOwnsGamePassAsync(player.UserId,PASSIDHERE) ------ Your Gamepass ID here
+
+if ownsGamepass then
+ local sword = game:GetService("ReplicatedStorage"):WaitForChild("ClassicSword"):Clone() -------- Change "ClassicSword" to your tool's name
+ sword.Parent = player.Backpack
+end
